@@ -46,9 +46,11 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             Log.i("MAIN ACTIVITY", "onPostExecute: " +s);
-            searchResults.setText(s);
             if (s != null && !s.equals("")){
+                showJsonData();
                 searchResults.setText(s);
+            }else{
+                showErrorMessage();
             }
             super.onPostExecute(s);
         }
@@ -83,7 +85,15 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    private void showJsonData() {
+        errorMessageDisplay.setVisibility(View.INVISIBLE);
+        searchResults.setVisibility(View.VISIBLE);
+    }
 
+    private void showErrorMessage() {
+        searchResults.setVisibility(View.INVISIBLE);
+        errorMessageDisplay.setVisibility(View.VISIBLE);
+    }
 
     private void clear(){
         urlDisplay.setText("Github URL HERE");
@@ -97,6 +107,8 @@ public class MainActivity extends AppCompatActivity {
         urlDisplay = (TextView) findViewById(R.id.url_display);
         searchResults = (TextView) findViewById(R.id.github_search_results);
         search_box = (EditText) findViewById(R.id.search_box);
+        errorMessageDisplay = (TextView) findViewById(R.id.error_message_display);
+        requestProgress = (ProgressBar) findViewById(R.id.request_progress);
         //searchResults.setText("HIOLAAA");
     }
 }
