@@ -3,4 +3,5 @@
     <string name="clear_text">CLEAR</string>
     <string name="search_text">LAUNCH</string>
     <string name="search_press">EL USUARIO HA PULSADO SERACH</string>
+    <string name="error_message">Se ha producido un errror, vuelve a intentarlo mas tarde</string>
 </resources>
