@@ -83,7 +83,15 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    private void showJsonData() {
+        errorMessageDisplay.setVisibility(View.INVISIBLE);
+        searchResult.setVisibility(View.VISIBLE);
+    }
 
+    private void showErrorMessage() {
+        searchResult.setVisibility(View.INVISIBLE);
+        errorMessageDisplay.setVisibility(View.VISIBLE);
+    }
 
     private void clear(){
         urlDisplay.setText("Github URL HERE");
