@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">practica2_1_apiSuperheroes</string>
+    <string name="clear_text">CLEAR</string>
+    <string name="search_text">LAUNCH</string>
+    <string name="search_press">EL USUARIO HA PULSADO SERACH</string>
+</resources>

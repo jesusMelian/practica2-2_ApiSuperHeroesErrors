@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- lo que hace esto es subir el menu en la parte alta es una librería -->
+    <item
+        android:id="@+id/search"
+        android:title="@string/search_text"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom"
+        />
+    <!--ADD CLEAR BUTTON-->
+    <item
+        android:id="@+id/clear"
+        android:title="@string/clear_text"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom"
+        />
+</menu>
